@@ -13,9 +13,7 @@ This allows to avoid process start overhead.
 
 var MyStem = require('node-mystem');
 
-var myStem = new MyStem({
-    path: '/path/to/mystem3'
-});
+var myStem = new MyStem();
 myStem.start(); // Run mystem in separate process
 
 myStem.lemmatize("немцы").then(function(lemma) {
