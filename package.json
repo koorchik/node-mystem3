@@ -1,5 +1,5 @@
 {
-  "name": "node-mystem",
+  "name": "mystem3",
   "version": "1.0.0",
   "description": "NodeJS wrapper for the Yandex MyStem 3",
   "main": "index.js",
