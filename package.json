@@ -4,7 +4,7 @@
   "description": "NodeJS wrapper for the Yandex MyStem 3",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "bin/download-mystem.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,10 @@
   },
   "homepage": "https://github.com/koorchik/node-mystem",
   "dependencies": {
-    "es6-promises": "^1.0.10"
+    "es6-promises": "^1.0.10",
+    "mkdirp": "^0.5.0",
+    "path": "^0.11.14",
+    "request": "^2.55.0",
+    "tar.gz": "^0.1.1"
   }
 }

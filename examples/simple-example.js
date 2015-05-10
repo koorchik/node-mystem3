@@ -3,9 +3,7 @@
 var MyStem = require('../lib/MyStem');
 var Promise = require('es6-promises');
 
-var myStem = new MyStem({
-    path: '/Users/koorchik/Downloads/mystem 3'
-});
+var myStem = new MyStem();
 
 myStem.start();
 
