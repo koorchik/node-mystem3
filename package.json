@@ -1,0 +1,29 @@
+{
+  "name": "node-mystem",
+  "version": "1.0.0",
+  "description": "NodeJS wrapper for the Yandex MyStem 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koorchik/node-mystem.git"
+  },
+  "keywords": [
+    "NLP",
+    "morphology",
+    "yandex",
+    "stemming",
+    "lemmatization"
+  ],
+  "author": "koorchik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koorchik/node-mystem/issues"
+  },
+  "homepage": "https://github.com/koorchik/node-mystem",
+  "dependencies": {
+    "es6-promises": "^1.0.10"
+  }
+}
