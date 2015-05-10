@@ -2,7 +2,7 @@
   "name": "mystem3",
   "version": "1.0.0",
   "description": "NodeJS wrapper for the Yandex MyStem 3",
-  "main": "index.js",
+  "main": "lib/MyStem.js",
   "scripts": {
     "postinstall": "bin/download-mystem.js"
   },
