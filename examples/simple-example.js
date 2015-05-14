@@ -1,7 +1,7 @@
 'use strict';
 
 var MyStem = require('../lib/MyStem');
-var Promise = require('es6-promises');
+var Promise = require('bluebird');
 
 var myStem = new MyStem();
 
