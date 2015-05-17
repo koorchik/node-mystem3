@@ -21,7 +21,43 @@ myStem.start(); // Run mystem in separate process
 myStem.lemmatize("немцы").then(function(lemma) {
     console.log(lemma);
 }).then(function() {
-    myStem.stop(); // Stop mystem process
+    myStem.stop(); // Or you can write process.exit();
 }).catch(console.error);
 
 ```
+
+## Methods
+
+### new MyStem(options)
+
+Return myStem object. Supported options are:
+
+1. "path" (optional, by default module downloads mystem binary itself) - path to mystem executable. If PATH env variable contains path to the folder with mystem binary then you can write ```new MyStem({"path": "mystem"})```
+
+### myStem.start()
+
+Starts mystem as separate process and establishes commucation with it. This gives huge performance boost. As we do not need to start mystem for every word
+
+### myStem.stop()
+
+Stops mystem process. Will be automatically stopped on process.exit();
+
+
+### myStem.lemmatize(word)
+
+Returns promise with lemmatized version for passed word
+
+# AUTHOR
+koorchik (Viktor Turskyi)
+
+# TODO
+
+* Add support for all mystem grammemes
+
+# BUGS
+Please report any bugs or feature requests to Github https://github.com/koorchik/node-mystem3/issues
+
+
+
+
+
