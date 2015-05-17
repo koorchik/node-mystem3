@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/koorchik/node-mystem3.svg)](https://travis-ci.org/koorchik/node-mystem3)
+
 MyStem
 ------
 
