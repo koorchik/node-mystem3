@@ -47,9 +47,9 @@ Stops mystem process. Will be automatically stopped on process.exit();
 
 Returns promise with lemmatized version for passed word
 
-# AUTHOR
+## AUTHOR
 koorchik (Viktor Turskyi)
 
-# TODO
+## TODO
 
 * Add support for all mystem grammemes
