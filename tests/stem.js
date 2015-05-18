@@ -2,12 +2,25 @@ var assert = require('chai').assert;
 
 var MyStem = require('../lib/MyStem');
 
-test('Lemmatize', function(done) {
+test('Lemmatize known word', function(done) {
     var myStem = new MyStem();
     myStem.start();
 
     myStem.lemmatize("немцы").then(function(lemma) {
         assert.equal( lemma, "немец");
+    }).then(function() {
+        myStem.stop();
+        done();
+    });
+});
+
+
+test('Lemmatize unknown word', function(done) {
+    var myStem = new MyStem();
+    myStem.start();
+
+    myStem.lemmatize("кркркрк").then(function(lemma) {
+        assert.equal( lemma, "кркркрк");
     }).then(function() {
         myStem.stop();
         done();
