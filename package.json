@@ -4,7 +4,7 @@
   "description": "NodeJS wrapper for the Yandex MyStem 3",
   "main": "lib/MyStem.js",
   "scripts": {
-    "postinstall": "bin/download-mystem.js",
+    "postinstall": "node bin/download-mystem.js",
     "test": "mocha  --timeout 1000 --ui qunit tests/*"
   },
   "repository": {
