@@ -16,7 +16,7 @@ var TARBALL_URLS = {
     'darwin': {
         'x64': "http://download.cdn.yandex.net/mystem/mystem-3.0-macosx10.8.tar.gz"
     },
-    'win': {
+    'win32': {
         'ia32': "http://download.cdn.yandex.net/mystem/mystem-3.0-win7-32bit.zip",
         'x64': "http://download.cdn.yandex.net/mystem/mystem-3.0-win7-64bit.zip",
     },
