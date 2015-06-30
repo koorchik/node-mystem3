@@ -26,3 +26,15 @@ test('Lemmatize unknown word', function(done) {
         done();
     });
 });
+
+test('Lemmatize non word', function(done) {
+    var myStem = new MyStem();
+    myStem.start();
+
+    myStem.lemmatize("123яблоко").then(function(lemma) {
+        assert.equal( lemma, "123яблоко");
+    }).then(function() {
+        myStem.stop();
+        done();
+    });
+});
