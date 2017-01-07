@@ -1,6 +1,6 @@
 {
   "name": "mystem3",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "NodeJS wrapper for the Yandex MyStem 3",
   "main": "lib/MyStem.js",
   "scripts": {

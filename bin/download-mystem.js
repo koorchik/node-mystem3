@@ -10,18 +10,18 @@ var targz   = require('tar.gz');
 
 var TARBALL_URLS = {
     'linux': {
-        'ia32': "http://download.cdn.yandex.net/mystem/mystem-3.0-linux3.5-32bit.tar.gz",
-        'x64': "http://download.cdn.yandex.net/mystem/mystem-3.0-linux3.1-64bit.tar.gz",
+        'ia32': "https://download.cdn.yandex.net/mystem/mystem-3.0-linux3.5-32bit.tar.gz",
+        'x64': "https://download.cdn.yandex.net/mystem/mystem-3.0-linux3.1-64bit.tar.gz",
     },
     'darwin': {
-        'x64': "http://download.cdn.yandex.net/mystem/mystem-3.0-macosx10.8.tar.gz"
+        'x64': "https://download.cdn.yandex.net/mystem/mystem-3.0-macosx10.8.tar.gz"
     },
     'win32': {
-        'ia32': "http://download.cdn.yandex.net/mystem/mystem-3.0-win7-32bit.zip",
-        'x64': "http://download.cdn.yandex.net/mystem/mystem-3.0-win7-64bit.zip",
+        'ia32': "https://download.cdn.yandex.net/mystem/mystem-3.0-win7-32bit.zip",
+        'x64': "https://download.cdn.yandex.net/mystem/mystem-3.0-win7-64bit.zip",
     },
     'freebsd': {
-        'x64': "http://download.cdn.yandex.net/mystem/mystem-3.0-freebsd9.0-64bit.tar.gz",
+        'x64': "https://download.cdn.yandex.net/mystem/mystem-3.0-freebsd9.0-64bit.tar.gz",
     }
 };
 
@@ -67,4 +67,3 @@ function unzipFile(src, dest, cb) {
 
     new targz().extract(src, dest, cb);
 }
-
