@@ -47,7 +47,7 @@ Stops mystem process. Will be automatically stopped on process.exit();
 
 Returns promise with lemmatized version for passed word
 
-### myStem.fetchAllGrammemes(word)
+### myStem.extractAllGrammemes(word)
 
 Returns promise with array of lemmatized version for passed word and all grammemes
 
