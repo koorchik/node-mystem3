@@ -52,8 +52,10 @@ Returns promise with lemmatized version for passed word
 Returns promise with array of lemmatized version for passed word and all grammemes
 
 ## AUTHOR
-koorchik (Viktor Turskyi)
 
-## TODO
+@koorchik (Viktor Turskyi)
 
-* Add support for all mystem grammemes
+## CONTRIBUTORS
+
+@bulgakovk
+
