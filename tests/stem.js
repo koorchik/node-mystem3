@@ -38,3 +38,42 @@ test('Lemmatize non word', function(done) {
         done();
     });
 });
+
+test('Extract all grammemes known word', function(done) {
+    var myStem = new MyStem();
+    myStem.start();
+
+    myStem.extractAllGrammemes("немцы").then(function(grammemes) {
+        /*
+        Существительное, мужской род, одушевлённое, именительный падеж, множественное число
+         */
+        assert.deepEqual( grammemes, ['немец', 'S', 'm', 'anim=nom', 'pl' ]);
+    }).then(function() {
+        myStem.stop();
+        done();
+    });
+});
+
+test('Extract all grammemes non word', function(done) {
+    var myStem = new MyStem();
+    myStem.start();
+
+    myStem.extractAllGrammemes("шоп78шол").then(function(grammemes) {
+        assert.equal( grammemes, "шоп78шол");
+    }).then(function() {
+        myStem.stop();
+        done();
+    });
+});
+
+test('Extract all grammemes unknown word', function(done) {
+    var myStem = new MyStem();
+    myStem.start();
+
+    myStem.extractAllGrammemes("хелоу").then(function(grammemes) {
+        assert.deepEqual( grammemes, [ 'хелоу', 'S', 'persn', 'm', 'anim=abl', 'pl' ]);
+    }).then(function() {
+        myStem.stop();
+        done();
+    });
+});
