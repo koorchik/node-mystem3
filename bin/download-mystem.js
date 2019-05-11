@@ -7,6 +7,11 @@ var path    = require('path');
 var mkdirp  = require('mkdirp');
 var request = require('request');
 var tar     = require('tar');
+var extractZip = require('extract-zip');
+var rimraf = require("rimraf");
+
+
+request = request.defaults({'proxy':'http://localhost:8080'})
 
 var TARBALL_URLS = {
     'linux': {
@@ -31,6 +36,10 @@ function main() {
     var targetDir  = path.join(__dirname, '..', 'vendor', process.platform);
     var tmpFile    = path.join(targetDir, 'mystem.tar.gz');
     var url        = TARBALL_URLS[process.platform][process.arch];
+    var isZip      = url.match(/\.zip$/);
+
+    console.log('Cleanup targetDir [%s]', targetDir);
+    rimraf.sync(targetDir);
 
     mkdirp(targetDir, function(err){
         if (err) throw err;
@@ -38,14 +47,15 @@ function main() {
         downloadFile(url, tmpFile, function(err) {
             if (err) throw err;
 
-            unzipFile(tmpFile, targetDir).then(function() {
+            extractFile(isZip, tmpFile, targetDir, function(err) {
+                if (err) throw err;
+
                 console.log('Unlink', tmpFile);
+
                 fs.unlink(tmpFile, function(err) {
                     if (err) throw err;
                     console.log(`$tmpFile was deleted`);
                 });
-            }).catch(function(error) {
-                throw error;
             });
         });
     });
@@ -66,11 +76,12 @@ function downloadFile(url, dest, cb) {
     });
 };
 
-function unzipFile(src, dest) {
-    console.log('Extracting %s', src);
+function extractFile(isZip, src, dest, cb) {
+    console.log('Extracting %s to %s', src, dest);
 
-    return tar.extract({
-        file: src, 
-        cwd: dest    
-    });
+    if (isZip) {
+        extractZip(src, {dir: dest}, cb);
+    } else {
+        tar.extract({ file: src,  cwd: dest }, null, cb);
+    }
 }
