@@ -10,9 +10,6 @@ var tar     = require('tar');
 var extractZip = require('extract-zip');
 var rimraf = require("rimraf");
 
-
-// request = request.defaults({'proxy':'http://localhost:8080'})
-
 var TARBALL_URLS = {
     'linux': {
         'ia32': "https://download.cdn.yandex.net/mystem/mystem-3.0-linux3.5-32bit.tar.gz",
