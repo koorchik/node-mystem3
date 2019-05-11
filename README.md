@@ -3,7 +3,7 @@
 MyStem
 ------
 
-This module contains a wrapper for an excellent morphological analyzer for Russian language Yandex Mystem 3.0 released in June 2014. A morphological analyzer can perform lemmatization of text and derive a set of morphological attributes for each token.
+This module contains a wrapper for an excellent morphological analyzer for Russian language Yandex Mystem 3.1 (3.0 for 32bit architectures). A morphological analyzer can perform lemmatization of text and derive a set of morphological attributes for each token.
 
 
 This module start mystem as separate process and commucates with it. 
