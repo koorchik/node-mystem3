@@ -11,7 +11,7 @@ var extractZip = require('extract-zip');
 var rimraf = require("rimraf");
 
 
-request = request.defaults({'proxy':'http://localhost:8080'})
+// request = request.defaults({'proxy':'http://localhost:8080'})
 
 var TARBALL_URLS = {
     'linux': {
